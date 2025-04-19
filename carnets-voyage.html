@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Carnets de Voyage - Hassine & Célia</title>
+
+<style>
+:root {
+  --rose: #FF6F91; /* Couleur plus vive pour un contraste plus fort */
+  --bleu: #4A90E2; /* Bleu plus foncé pour plus de visibilité */
+  --vert: #76D7C4; /* Vert plus saturé */
+  --texte: #2C3E50; /* Texte foncé pour une meilleure lisibilité */
+  --background: #F1F3F4; /* Fond plus clair mais pas trop blanc */
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background: grey;
+  color: var(--texte);
+  margin: 0;
+  padding: 0;
+}
+
+.page-gardes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(135deg, var(--rose), var(--bleu));
+}
+
+.voyage-card {
+  background: rgba(255, 255, 255, 0.8); /* blanc avec 80% d'opacité */
+  width: 30%;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.voyage-card:hover {
+  transform: scale(1.05);
+}
+
+.page-voyage {
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.jour {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  border-left: 5px solid var(--rose);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.horaire {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  margin: 10px 0;
+}
+
+.heure {
+  font-weight: bold;
+  color: var(--rose);
+}
+
+.halal {
+  background: #E6FFED;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.8em;
+  display: inline-block;
+}
+
+h1 {
+  color: var(--vert);
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: var(--vert);
+  padding-bottom: 5px;
+}
+
+.retour {
+  display: block;
+  text-align: center;
+  margin: 30px;
+  color: var(--rose);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.retour:hover {
+  text-decoration: underline;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<!-- PAGE DE GARDE UNIVERSELLE -->
+<div class="page-gardes" id="accueil">
+<h1>Carnets de Voyage</h1>
+<h2>Hassine & Célia</h2>
+
+<div class="voyage-card" onclick="showVoyage('jspencore')">
+<h3>🇹🇷 jspencore 2025</h3>
+<p>6-13 juillet 2025</p>
+<p><i>Cliquez pour ouvrir</i></p>
+</div>
+
+<div class="voyage-card" onclick="showVoyage('amsterdam')">
+<h3>🇳🇱 Amsterdam 2025</h3>
+<p>21-23 juillet 2025</p>
+<p><i>Cliquez pour ouvrir</i></p>
+</div>
+
+<!-- ESPACE POUR D'AUTRES VOYAGES -->
+<div class="voyage-card" style="background: var(--vert);">
+<h3>➕ Ajouter un voyage</h3>
+<p><i>À personnaliser</i></p>
+</div>
+</div>
+
+<!-- PAGE JSP ENCORE -->
+<div class="page-voyage" id="jspencore" style="display:none;">
+<a href="javascript:showAccueil()" class="retour">← Retour aux carnets</a>
+
+<h1 style="color: var(--rose); text-align: center;">JSP 2025</h1>
+<p style="color: white ; text-align: center;">6-13 juillet 2025</p>
+
+<!-- LUNDI 21 -->
+<div class="jour">
+<h2>🗓️ Lundi 6 juillet</h2>
+
+<div class="horaire">
+<div class="heure">12h00</div>
+<div><b>Déjeuner</b> @Halal Bites <span class="halal">HALAL</span><br>
+<i>Burgers/wraps - 10min de la gare</i></div>
+</div>
+
+<div class="horaire">
+<div class="heure">14h30</div>
+<div><b>Croisière canaux</b> 🚤<br>
+<i>Départ : Stationsplein (1h30)</i></div>
+</div>
+
+<div class="horaire">
+<div class="heure">19h00</div>
+<div><b>Dîner</b> @Zam Zam <span class="halal">HALAL</span><br>
+<i>Cuisine marocaine - Quartier De Pijp</i></div>
+</div>
+</div>
+
+<!-- MARDI 22 -->
+<div class="jour">
+<h2>🗓️ Mardi 22 juillet</h2>
+
+<div class="horaire">
+<div class="heure">09h30</div>
+<div><b>Brunch</b> @Coffee & Coconuts</div>
+</div>
+
+<div class="horaire">
+<div class="heure">11h00</div>
+<div><b>STRAAT Museum</b> 🎨<br>
+<i>Street art & photos fun</i></div>
+</div>
+
+<div class="horaire">
+<div class="heure">14h00</div>
+<div><b>Location vélos</b> 🚲<br>
+<i>Parc Vondel → Jordaan</i></div>
+</div>
+</div>
+
+<!-- MERCREDI 23 -->
+<div class="jour">
+<h2>🗓️ Mercredi 23 juillet</h2>
+
+<div class="horaire">
+<div class="heure">09h00</div>
+<div><b>Petit-déj</b> @Foodhallen <span class="halal">HALAL OPTIONS</span></div>
+</div>
+
+<div class="horaire">
+<div class="heure">11h00</div>
+<div><b>Marché Albert Cuyp</b> 🛍️<br>
+<i>Souvenirs & snacks locaux</i></div>
+</div>
+
+<div class="horaire">
+<div class="heure">15h00</div>
+<div><b>Café Loetje</b> <span class="halal">HALAL OPTIONS</span><br>
+<i>Dernier repas avant départ</i></div>
+</div>
+
+<div class="horaire">
+<div class="heure">16h30</div>
+<div><b>Trajet aéroport</b> 🚖<br>
+<i>15min en taxi depuis Centraal</i></div>
+</div>
+</div>
+
+<!-- INFOS PRATIQUES -->
+<div class="jour">
+<h2>📌 Infos pratiques</h2>
+<div class="horaire">
+<div class="heure">🍖</div>
+<div><b>Restos Halal</b> :<br>
+- Zam Zam (marocain)<br>
+- Bazar Amsterdam (oriental)<br>
+- Roti Room (caribéen)</div>
+</div>
+</div>
+</div>
+
+<!-- PAGE AMSTERDAM 2025 -->
+<div class="page-voyage" id="amsterdam" style="display:none;">
+<a href="javascript:showAccueil()" class="retour">← Retour aux carnets</a>
+
+<h1 style="color: var(--rose); text-align: center;">Amsterdam 2025</h1>
+<p style="color: white ; text-align: center;">21-23 juillet 2025</p>
+
+<!-- LUNDI 21 JUILLET -->
+<div class="jour">
+<h2>🗓️ Lundi 21 juillet</h2>
+
+<div class="horaire">
+  <div class="heure">09h20</div>
+  <div><b>Arrivée à Amsterdam</b> 🚅<br><i>Depuis la gare centrale</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">10h00</div>
+  <div><b>Installation hôtel</b> 🏨<br><i>Check-in rapide si possible, ou dépôt des valises</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">11h30</div>
+  <div><b>Balade Jordaan + 9 Straatjes</b> 🛍️<br><i>Quartier mignon, ruelles fleuries, boutiques locales</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">13h00</div>
+  <div><b>Déjeuner</b> @Mezrab <span class="halal">HALAL</span><br><i>Wraps & mezzés - ambiance décontractée</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">14h30</div>
+  <div><b>Croisière sur les canaux</b> 🚤<br><i>Départ depuis Stationsplein - durée 1h30</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">17h00</div>
+  <div><b>Pause café</b> @Monks Coffee Roasters ☕<br><i>Ambiance chill & latte stylé</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">19h30</div>
+  <div><b>Dîner</b> @Bazar Amsterdam <span class="halal">HALAL</span><br><i>Décor coloré, spécialités orientales</i></div>
+</div>
+</div>
+
+<!-- MARDI 22 JUILLET -->
+<div class="jour">
+<h2>🗓️ Mardi 22 juillet</h2>
+
+<div class="horaire">
+  <div class="heure">09h30</div>
+  <div><b>Brunch</b> @Coffee & Coconuts 🥐<br><i>Super cadre, produits frais, déco chill</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">11h00</div>
+  <div><b>Musée STRAAT</b> 🎨<br><i>Musée de street art, coloré et très instagrammable</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">13h30</div>
+  <div><b>Déjeuner rapide</b> @Roti Room <span class="halal">HALAL</span><br><i>Roti caribéens, option végétarienne aussi</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">15h00</div>
+  <div><b>Location de vélos</b> 🚲<br><i>Balade dans Vondelpark et jusqu'à Museumplein</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">17h30</div>
+  <div><b>Pause goûter</b> @Van Ness Cupcake 🍰<br><i>Petite pause sucrée</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">20h00</div>
+  <div><b>Dîner romantique</b> @Zina <span class="halal">HALAL OPTIONS</span><br><i>Cadre cosy, cuisine fusion méditerranéenne</i></div>
+</div>
+</div>
+
+<!-- MERCREDI 23 JUILLET -->
+<div class="jour">
+<h2>🗓️ Mercredi 23 juillet</h2>
+
+<div class="horaire">
+  <div class="heure">09h00</div>
+  <div><b>Petit-déj</b> @Foodhallen <span class="halal">HALAL OPTIONS</span><br><i>Plusieurs stands à tester</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">10h30</div>
+  <div><b>Albert Cuyp Market</b> 🛍️<br><i>Souvenirs, stroopwafels, ambiance locale</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">12h30</div>
+  <div><b>Visite de De Pijp</b> 🌿<br><i>Quartier multiculturel, chill & branché</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">14h30</div>
+  <div><b>Café dans une serre</b> @De Kas 🌱<br><i>Serre + jardin aromatique (réservation recommandée)</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">17h30</div>
+  <div><b>Dîner final</b> @The Halal Guys 🍽️<br><i>Wraps US-style pour finir sur une note street food</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">19h00</div>
+  <div><b>Balade en amoureux</b> 💖<br><i>Derniers instants le long des canaux au coucher du soleil</i></div>
+</div>
+
+<div class="horaire">
+  <div class="heure">20h00</div>
+  <div><b>Trajet vers l’aéroport</b> 🚖<br><i>Check-in pour le retour</i></div>
+</div>
+</div>
+
+<!-- INFOS PRATIQUES -->
+<div class="jour">
+<h2>📌 Infos pratiques</h2>
+<div class="horaire">
+  <div class="heure">🍖</div>
+  <div><b>Adresses halal recommandées</b> :<br>
+    - Zam Zam (marocain)<br>
+    - Bazar Amsterdam (oriental)<br>
+    - Roti Room (caribéen)<br>
+    - The Halal Guys (wraps)<br>
+    - Zina (fusion)</div>
+</div>
+<div class="horaire">
+  <div class="heure">💡</div>
+  <div><b>Tips</b> :<br>
+    - Toujours réserver pour les restos du soir<br>
+    - Privilégier le vélo ou la marche<br>
+    - Garder une carte bancaire avec plafond autorisé (certains restos ne prennent pas de cash)</div>
+</div>
+</div>
+</div>
+
+
+<script>
+function showVoyage(id) {
+  // On cache toutes les pages voyages
+  document.getElementById('amsterdam').style.display = 'none';
+  document.getElementById('jspencore').style.display = 'none';
+  
+  // Puis on affiche celle qu'on a cliquée
+  document.getElementById('accueil').style.display = 'none';
+  document.getElementById(id).style.display = 'block';
+  window.scrollTo(0, 0);
+}
+
+function showAccueil() {
+  // On cache toutes les pages voyages
+  document.getElementById('amsterdam').style.display = 'none';
+  document.getElementById('jspencore').style.display = 'none';
+
+  // Et on affiche la page d'accueil
+  document.getElementById('accueil').style.display = 'flex';
+  window.scrollTo(0, 0);
+}
+</script>
+
+
+</body>
+</html>
