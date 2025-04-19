@@ -80,6 +80,12 @@ body {
   display: inline-block;
 }
 
+.check-activite {
+  transform: scale(1.2);
+  margin-right: 10px;
+  accent-color: var(--rose); /* joli rose pastel */
+}
+  
 h1 {
   color: var(--vert);
   font-size: 3em;
@@ -141,91 +147,7 @@ h2 {
 <h1 style="color: var(--rose); text-align: center;">TOULON 2025</h1>
 <p style="color: white ; text-align: center;">19-26 mai 2025</p>
 
-<!-- LUNDI 21 -->
-<div class="jour">
-<h2>🗓️ Lundi 6 juillet</h2>
 
-<div class="horaire">
-<div class="heure">12h00</div>
-<div><b>Déjeuner</b> @Halal Bites <span class="halal">HALAL</span><br>
-<i>Burgers/wraps - 10min de la gare</i></div>
-</div>
-
-<div class="horaire">
-<div class="heure">14h30</div>
-<div><b>Croisière canaux</b> 🚤<br>
-<i>Départ : Stationsplein (1h30)</i></div>
-</div>
-
-<div class="horaire">
-<div class="heure">19h00</div>
-<div><b>Dîner</b> @Zam Zam <span class="halal">HALAL</span><br>
-<i>Cuisine marocaine - Quartier De Pijp</i></div>
-</div>
-</div>
-
-<!-- MARDI 22 -->
-<div class="jour">
-<h2>🗓️ Mardi 22 juillet</h2>
-
-<div class="horaire">
-<div class="heure">09h30</div>
-<div><b>Brunch</b> @Coffee & Coconuts</div>
-</div>
-
-<div class="horaire">
-<div class="heure">11h00</div>
-<div><b>STRAAT Museum</b> 🎨<br>
-<i>Street art & photos fun</i></div>
-</div>
-
-<div class="horaire">
-<div class="heure">14h00</div>
-<div><b>Location vélos</b> 🚲<br>
-<i>Parc Vondel → Jordaan</i></div>
-</div>
-</div>
-
-<!-- MERCREDI 23 -->
-<div class="jour">
-<h2>🗓️ Mercredi 23 juillet</h2>
-
-<div class="horaire">
-<div class="heure">09h00</div>
-<div><b>Petit-déj</b> @Foodhallen <span class="halal">HALAL OPTIONS</span></div>
-</div>
-
-<div class="horaire">
-<div class="heure">11h00</div>
-<div><b>Marché Albert Cuyp</b> 🛍️<br>
-<i>Souvenirs & snacks locaux</i></div>
-</div>
-
-<div class="horaire">
-<div class="heure">15h00</div>
-<div><b>Café Loetje</b> <span class="halal">HALAL OPTIONS</span><br>
-<i>Dernier repas avant départ</i></div>
-</div>
-
-<div class="horaire">
-<div class="heure">16h30</div>
-<div><b>Trajet aéroport</b> 🚖<br>
-<i>15min en taxi depuis Centraal</i></div>
-</div>
-</div>
-
-<!-- INFOS PRATIQUES -->
-<div class="jour">
-<h2>📌 Infos pratiques</h2>
-<div class="horaire">
-<div class="heure">🍖</div>
-<div><b>Restos Halal</b> :<br>
-- Zam Zam (marocain)<br>
-- Bazar Amsterdam (oriental)<br>
-- Roti Room (caribéen)</div>
-</div>
-</div>
-</div>
 
 <!-- PAGE AMSTERDAM 2025 -->
 <div class="page-voyage" id="amsterdam" style="display:none;">
@@ -240,39 +162,59 @@ h2 {
 
 <div class="horaire">
   <div class="heure">09h20</div>
+  <div>
+    <input type="checkbox" class="check-activite" />
   <div><b>Arrivée à Amsterdam</b> 🚅<br><i>Depuis la gare centrale</i></div>
 </div>
+  </div>
 
 <div class="horaire">
   <div class="heure">10h00</div>
+  <div>
+    <input type="checkbox" class="check-activite" />
   <div><b>Installation hôtel</b> 🏨<br><i>Check-in rapide si possible, ou dépôt des valises</i></div>
 </div>
+  </div>
 
 <div class="horaire">
   <div class="heure">11h30</div>
+  <div>
+    <input type="checkbox" class="check-activite" />
   <div><b>Balade Jordaan + 9 Straatjes</b> 🛍️<br><i>Quartier mignon, ruelles fleuries, boutiques locales</i></div>
 </div>
+  </div>
 
 <div class="horaire">
   <div class="heure">13h00</div>
+  <div>
+    <input type="checkbox" class="check-activite" />
   <div><b>Déjeuner</b> @Mezrab <span class="halal">HALAL</span><br><i>Wraps & mezzés - ambiance décontractée</i></div>
 </div>
+  </div>
 
 <div class="horaire">
   <div class="heure">14h30</div>
+  <div>
+    <input type="checkbox" class="check-activite" />
   <div><b>Croisière sur les canaux</b> 🚤<br><i>Départ depuis Stationsplein - durée 1h30</i></div>
 </div>
+  </div>
 
 <div class="horaire">
   <div class="heure">17h00</div>
+  <div>
+    <input type="checkbox" class="check-activite" />
   <div><b>Pause café</b> @Monks Coffee Roasters ☕<br><i>Ambiance chill & latte stylé</i></div>
+    </div>
 </div>
 
 <div class="horaire">
   <div class="heure">19h30</div>
+  <div>
+    <input type="checkbox" class="check-activite" />
   <div><b>Dîner</b> @Bazar Amsterdam <span class="halal">HALAL</span><br><i>Décor coloré, spécialités orientales</i></div>
 </div>
-</div>
+  </div>
 
 <!-- MARDI 22 JUILLET -->
 <div class="jour">
@@ -393,6 +335,20 @@ function showAccueil() {
   document.getElementById('accueil').style.display = 'flex';
   window.scrollTo(0, 0);
 }
+
+document.querySelectorAll('.check-activite').forEach(function(box) {
+  box.addEventListener('change', function() {
+    const container = this.parentElement;
+    if (this.checked) {
+      container.style.opacity = '0.6';
+      container.style.textDecoration = 'line-through';
+    } else {
+      container.style.opacity = '1';
+      container.style.textDecoration = 'none';
+    }
+  });
+});
+
 </script>
 
 
